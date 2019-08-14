@@ -29,7 +29,7 @@ class CreateMassagesTable extends Migration
             $table->string('keahlian');
             $table->string('status');
             $table->string('pengalaman');
-            $table->string('darsimana');
+            $table->string('darimana');
             $table->string('alasan');
             $table->string('jam_kerja');
             $table->timestamps();

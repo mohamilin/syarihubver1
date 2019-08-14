@@ -41,4 +41,10 @@ class MentorController extends Controller
         $data_mentor->delete($id);
         return redirect('/mentor');
     }
+
+    public function profil($id)
+    {
+        $data_mentor = \App\Mentor::find($id);
+        return view('admin.masterData.mentorProfil',['data_mentor'=>$data_mentor]);
+    }
 }

@@ -36,8 +36,8 @@
         @foreach ($data_mentor as $mentors)
         <tr>
             <td>{{ $mentors->id_mentor }}</td>
-            <td>{{ $mentors->nama_lengkap }}</td>
-            <td>{{ $mentors->no_hp }}</td>
+            <td><a href="/mentor/profil/{{$mentors->id }}" >{{ $mentors->nama_lengkap }}</a></td>
+            <td>{{ $mentors->no_whatsapp }}</td>
             <td>{{ $mentors->alamat }}</td>
             <td>{{ $mentors->pendidikan }}</td>
             <td>{{ $mentors->jml_juz }}</td>

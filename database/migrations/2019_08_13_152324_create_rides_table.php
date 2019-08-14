@@ -36,7 +36,7 @@ class CreateRidesTable extends Migration
             $table->string('bisa_whatsapp');
             $table->string('aktivitas');
             $table->string('penghasilan_perbulan');
-            $table->timestamps();
+            $table->timestamps();;
         });
     }
 

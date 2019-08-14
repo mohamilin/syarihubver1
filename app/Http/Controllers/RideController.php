@@ -42,5 +42,16 @@ class RideController extends Controller
         $data_pengendara->delete($id);
         return redirect('/ride');
     }
+
+    public function profil($id)
+    {
+        $data_pengendara = \App\Ride::find($id);
+        return view('admin.masterData.rideProfil',['data_pengendara'=>$data_pengendara]);
+    }
+
+    public function booking()
+    {
+        return view('admin.booking.ride');
+    }
 } 
 

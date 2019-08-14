@@ -35,8 +35,8 @@
         </tr>
         @foreach ($data_pengendara as $rides)
         <tr>
-            <td>{{ $rides->id_pengendara }}</td>
-            <td>{{ $rides->nama_lengkap }}</td>
+            <td >{{ $rides->id_pengendara }}</td>
+            <td><a href="/ride/profil/{{$rides->id }}" >{{ $rides->nama_lengkap }}</a></td>
             <td>{{ $rides->kota }}</td>
             <td>{{ $rides->alamat_email }}</td>
             <td>{{ $rides->no_hp}}</td>

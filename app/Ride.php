@@ -13,5 +13,9 @@ class Ride extends Model
                             'tgl_berlaku_plat','pengalaman','medsos','bisa_whatsapp','aktivitas','penghasilan_perbulan'];
 
     protected $primaryKey ='id';
-    public $timestamps = false;
+    public function customer()
+    {
+        return $this->belongsToMany('App\Customer','ride_customer','id_ride','id_customer');
+    }
+
 }

@@ -35,16 +35,16 @@
         </tr>
         @foreach ($data_massage as $massages)
         <tr>
-            <td>{{ $massages->id_pengendara }}</td>
-            <td>{{ $massages->nama_lengkap }}</td>
-            <td>{{ $massages->kota }}</td>
-            <td>{{ $massages->alamat_email }}</td>
+            <td>{{ $massages->id_massage }}</td>
+            <td><a href="/massage/profil/{{ $massages->id }}">{{ $massages->nama_lengkap }}</a></td>
+            <td>{{ $massages->alamat_tinggal }}</td>
+            <td>{{ $massages->keahlian }}</td>
+            <td>{{ $massages->jenis_kelamin }}</td>
             <td>{{ $massages->no_whatsapp}}</td>
-            <td>{{ $massages->no_plat }}</td>
             <td>
             <div class="btn-group">
-                <a class="btn btn-success" href="/message/{{ $massages->id }}/edit"><span>Edit</span></a>
-                <a class="btn btn-danger" href="/message/{{  $massages->id}}/delete"><span>Delete</span></a>
+                <a class="btn btn-success" href="/massage/{{ $massages->id }}/edit"><span>Edit</span></a>
+                <a class="btn btn-danger" href="/massage/{{  $massages->id}}/delete"><span>Delete</span></a>
             </div>
             </td>
         </tr>
@@ -61,19 +61,19 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel" style="font-size:20px; color:red;text-align:center;"><strong>TAMBAH DATA PENGENDARA</strong></h5>
+          <h5 class="modal-title" id="exampleModalLabel" style="font-size:20px; color:red;text-align:center;"><strong>TAMBAH DATA MESSAGE</strong></h5>
         </div>
         <div class="modal-body">
           <div class="row">
             <div class="col-lg-12">
-                <form class="form-horizontal" action="{{ url('/message/create') }}" method="POST">
+                <form class="form-horizontal" action="/massage/create" method="POST">
                     {{ csrf_field() }}
                     <div class="panel-body">
                         <div class="form-group" style="color:black;">
                             {{--  --}}
                             <div class="col-sm-12">
                                 <label for="exampleFormControlInput1">ID Massage</label>
-                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="ID Massage">
+                                <input type="text" name="id_massage" class="form-control" id="exampleFormControlInput1" placeholder="ID Massage">
                             </div>
                         {{--  --}}
                         <div class="col-sm-12">
